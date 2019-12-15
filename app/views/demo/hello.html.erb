@@ -1,0 +1,21 @@
+<h1>Hello world from hello</h1>
+
+<%= 1 + 1 %><br/>
+
+<% worldvar = "World" %>
+<%= "Hello #{worldvar}!" %>
+
+<br/>
+
+<% @array.each do |num| %>
+   <%= num %><br/>
+<% end %>
+
+<%= link_to("Index page", {:action => 'index'} ) %>
+
+<br/>
+
+ID: <%= @id %><br/>
+ID: <%= params[:id] %><br/>
+Page: <%= @page %><br/>
+Next page: <%= @page.to_i + 1 %>

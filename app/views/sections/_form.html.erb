@@ -1,0 +1,27 @@
+<table summary="Section form fields">
+    <tr>
+        <th>Name</th>
+        <td><%= f.text_field(:name) %>
+    <tr>
+    <tr>
+        <th>Position</th>
+        <td><%= f.select(:position, 1..@section_count) %>
+    <tr>
+    <tr>
+        <th>Visible</th>
+        <td><%= f.check_box(:visible) %>
+    <tr>
+    <tr>
+        <th>Page Id</th>
+        <td><%= f.select(:page_id, @pages.map{ |p| [p.name, p.id] }) %>
+    <tr>
+    <tr>
+        <th>Content Type</th>
+        <td><%= f.radio_button(:content_type, "text") %> Text
+        <td><%= f.radio_button(:content_type, "HTML") %> HTML
+    <tr>
+    <tr>
+        <th>Content</th>
+        <td><%= f.text_area(:content, :size => '40x10') %>
+    <tr>
+</table>
